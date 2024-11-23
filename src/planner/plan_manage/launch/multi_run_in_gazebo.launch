@@ -1,0 +1,40 @@
+<launch>
+    <arg name="obj_num" value="10" />
+    <arg name="map_size_x" value="100" />
+    <arg name="map_size_y" value="50" />
+    <arg name="map_size_z" value="3.0" />
+    <arg name="drone_id" default="0" />
+
+    <include file="$(find ego_planner)/launch/run_in_exp.launch">
+        <arg name="drone_id" value="0" />
+        <arg name="target_x" value="8" />
+        <arg name="target_y" value="-4" />
+        <arg name="target_z" value="1" />
+        <arg name="map_size_x" value="$(arg map_size_x)" />
+        <arg name="map_size_y" value="$(arg map_size_y)" />
+        <arg name="map_size_z" value="$(arg map_size_z)" />
+    </include>
+
+    <include file="$(find ego_planner)/launch/run_in_exp.launch">
+        <arg name="drone_id" value="1" />
+        <arg name="target_x" value="8" />
+        <arg name="target_y" value="0.0" />
+        <arg name="target_z" value="1" />
+        <arg name="map_size_x" value="$(arg map_size_x)" />
+        <arg name="map_size_y" value="$(arg map_size_y)" />
+        <arg name="map_size_z" value="$(arg map_size_z)" />
+    </include>
+
+    <include file="$(find ego_planner)/launch/run_in_exp.launch">
+        <arg name="drone_id" value="2" />
+        <arg name="target_x" value="8" />
+        <arg name="target_y" value="4" />
+        <arg name="target_z" value="1" />
+        <arg name="map_size_x" value="$(arg map_size_x)" />
+        <arg name="map_size_y" value="$(arg map_size_y)" />
+        <arg name="map_size_z" value="$(arg map_size_z)" />
+    </include>
+
+    <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher"
+        args="0 0 0 0 0 0 1 map world 10" />
+</launch>
