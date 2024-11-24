@@ -14,3 +14,8 @@ After starting the simulation (refer to [XTDrone](https://github.com/robin-shaun
 **Start the Planning**
 
 `roslaunch ego_planer multi_run_in_gazebo.launch` 
+
+# Need to Do
+
+1. When the drone makes a large turn, the controller will vibrate
+2. The trajectory of other drones is not taken into account when planning the drone
