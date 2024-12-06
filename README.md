@@ -19,3 +19,8 @@ After starting the simulation (refer to [XTDrone](https://github.com/robin-shaun
 
 1. When the drone makes a large turn, the controller will vibrate
 2. The trajectory of other drones is not taken into account when planning the drone
+
+
+# Update
+
+New version using EGO-Planer-v2 has been released, Click on the [link](https://github.com/XXLiu-HNU/Fast-Drone-250-v2) for more information
